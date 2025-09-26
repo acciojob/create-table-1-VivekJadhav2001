@@ -19,6 +19,6 @@ const btn = document.getElementById("button")
 
             tr.append(td1,td2)
 
-            table.insertBefore(tr,table.firstChild)
+            table.insertBefore(tr,table.rows[0])
 
         }
