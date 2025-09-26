@@ -1,24 +1,20 @@
 const btn = document.getElementById("button")
         const table = document.getElementById("sampleTable")
 
-        let count = 1;
 
         function insert_Row() {
             //Write your code here
 
-            const tr = document.createElement("tr")
-            const td1 = document.createElement("td")
-            td1.innerHTML = `New Cell${count}`
+            const tr = document.createElement("tr");
+    const td1 = document.createElement("td");
+    td1.innerHTML = "New Cell1";
 
-            count++
+    const td2 = document.createElement("td");
+    td2.innerHTML = "New Cell2";
 
-            const td2 = document.createElement("td")
-            td2.innerHTML = `New Cell${count}`
+    tr.append(td1, td2);
 
-            console.log(td1,td2, "Td for New Row")
-
-            tr.append(td1,td2)
-
-            table.insertBefore(tr,table.rows[0])
+    // Insert at the very top (before the first <tr>)
+    table.insertBefore(tr, table.rows[0]);
 
         }
